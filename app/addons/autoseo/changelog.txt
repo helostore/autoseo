@@ -1,0 +1,22 @@
+Features, requirements:
+
+* General:
+- only works if SEO addon is active;
+- active SEO names have priority over historical SEO names;
+
+* Products:
+- product SEO name is updated: if product's SEO name has changed, all previous SEO names will 301-redirect to the new URL;
+- product is deleted: it redirects to its main category;
+- when a parent category' SEO name is changed, the old URL is redirected to the new URL;
+
+
+* Categories:
+- category SEO name is updated: when a category's SEO name is changed, all its previous SEO names and all its products will be 301-redirected to the new URLs;
+- category is moved: idem;
+- category is deleted: when a category is deleted, all its children (products & categories) will redirect to the uppermost parent category;
+
+Known issues:
+- (CS-Cart bug) categories.manage, select a category, delete it, products within its deleted subcategories will become orphaned (available in database, but not in the backend); This is actually a CS-Cart bug.
+
+TODO:
+- domain change to/from www - check for potential consequences

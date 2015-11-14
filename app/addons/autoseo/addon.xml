@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>autoseo</id>
+    <name>AutoSEO</name>
+    <description>Handles in a smart way the SEO aspect of your actions (ie. creates redirects automatically)</description>
+    <version>1.0</version>
+    <priority>4294967294</priority>
+    <position>0</position>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <default_language>fr</default_language>
+    <translations>
+    </translations>
+    <queries>
+        <item>
+            CREATE TABLE ?:autoseo_entries (
+            `entry_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+            `object_id` mediumint(8) unsigned DEFAULT NULL,
+            `object_type` varchar(32) DEFAULT NULL,
+            `parent_object_id` mediumint(8) unsigned DEFAULT NULL,
+            `parent_object_type` varchar(32) DEFAULT NULL,
+            `value` varchar(255) DEFAULT NULL,
+            `status` char(1) DEFAULT NULL,
+            `lang_code` varchar(2) DEFAULT NULL,
+            `company_id` mediumint(8) unsigned DEFAULT NULL,
+            PRIMARY KEY (`entry_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </item>
+        <item>
+            CREATE TABLE ?:autoseo_links (
+            `link_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+            `entry_id` mediumint(8) unsigned DEFAULT NULL,
+            `parent_id` mediumint(8) unsigned DEFAULT NULL,
+            `value` varchar(255) DEFAULT NULL,
+            `parent` varchar(255) DEFAULT NULL,
+            `lang_code` varchar(2) DEFAULT NULL,
+            `company_id` mediumint(8) unsigned DEFAULT NULL,
+            PRIMARY KEY (`link_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:autoseo_entries</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:autoseo_links</item>
+    </queries>
+    <language_variables>
+    </language_variables>
+
+    <settings edition_type="ROOT">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="email">
+                        <type>input</type>
+                    </item>
+                    <item id="password">
+                        <type>password</type>
+                    </item>
+                    <item id="license">
+                        <type>input</type>
+                    </item>
+                    <item id="info">
+                        <type>info</type>
+                        <handler>fn_sidekick_info,autoseo</handler>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+    <compatibility>
+        <dependencies>sidekick</dependencies>
+        <core_version>
+            <min>4.2.1</min>
+        </core_version>
+    </compatibility>
+    <authors>
+        <author>
+            <name>HELOstore</name>
+            <email>contact@helostore.com</email>
+            <url>https://helostore.com</url>
+        </author>
+    </authors>
+</addon>
