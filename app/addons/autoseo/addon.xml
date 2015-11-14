@@ -3,7 +3,7 @@
     <id>autoseo</id>
     <name>AutoSEO</name>
     <description>Handles in a smart way the SEO aspect of your actions (ie. creates redirects automatically)</description>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <priority>4294967294</priority>
     <position>0</position>
     <status>disabled</status>
