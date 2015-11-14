@@ -6,6 +6,7 @@
     <version>1.0.2</version>
     <priority>4294967294</priority>
     <position>0</position>
+    <status>disabled</status>
     <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
     <default_language>fr</default_language>
     <translations>
@@ -41,18 +42,22 @@
         <item for="uninstall">DROP TABLE IF EXISTS ?:autoseo_links</item>
     </queries>
     <language_variables>
+        <item lang="en" id="twgadmin_access_id">Access ID</item>
     </language_variables>
     <settings edition_type="ROOT">
         <sections>
             <section id="general">
                 <items>
                     <item id="email">
+                        <name>HELOstore email</name>
                         <type>input</type>
                     </item>
                     <item id="password">
+                        <name>HELOstore password</name>
                         <type>password</type>
                     </item>
                     <item id="license">
+                        <name>License key</name>
                         <type>input</type>
                     </item>
                     <item id="info">

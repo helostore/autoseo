@@ -11,3 +11,15 @@ msgstr "AutoSEO"
 msgctxt "Addons::description::autoseo"
 msgid "Tools for developers by HELOstore"
 msgstr "Handles in a smart way the SEO aspect of your actions"
+
+msgctxt "SettingsOptions::autoseo::email"
+msgid "HELOstore email"
+msgstr "HELOstore email"
+
+msgctxt "SettingsOptions::autoseo::password"
+msgid "HELOstore password"
+msgstr "HELOstore password"
+
+msgctxt "SettingsOptions::autoseo::license"
+msgid "License key"
+msgstr "License key"
