@@ -18,7 +18,7 @@ if ($mode == 'test') {
 //        aa('Dest: '.$destination);
 
 //        aa($source.' => '.$destination);
-        aa($source.','.$destination);
+//        aa($source.','.$destination);
     }
 //	aa($urls,1);
     exit;

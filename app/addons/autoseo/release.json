@@ -1,0 +1,16 @@
+[
+    {
+        "version": "1.0.4",
+        "releaseDate": "2015-11-14 08:38:06",
+        "releaseTimestamp": "1447533486",
+        "hash": "0cccfd7cfdc91808fa3362ee4b4154c275306a11",
+        "commits": [
+            "[2017-12-30] Bumped version to 1.0.4",
+            "[2015-11-14]\tBumped version to 1.0.3",
+            "[2015-11-14]\tDowngraded to 2.0 scheme",
+            "[2015-11-14]\tBumped version to 1.0.2",
+            "[2015-11-14]\tIntegration with ADLS",
+            "[2015-11-14]\tBumped version to 1.0.1"
+        ]
+    }
+]

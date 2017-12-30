@@ -87,7 +87,6 @@ class AutoSEO
                 db_query('INSERT INTO ?:autoseo_links ?e', $entry);
             } else {
                 if ($old_value != $value) {
-                    aa('old: ' . $old_value . ' val: ' . $value);
                     //$entry['parent'] = $entry['value'];
                     //$entry['value'] = $old_value;
                     $entry['parent'] = $old_value;
