@@ -2,7 +2,7 @@
 <addon scheme="3.0">
     <id>autoseo</id>
     <name>AutoSEO</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <priority>4294967294</priority>
     <position>0</position>
     <status>disabled</status>
