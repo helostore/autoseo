@@ -1,5 +1,15 @@
 [
     {
+        "version": "1.0.7",
+        "releaseDate": "2018-05-11 08:28:31",
+        "releaseTimestamp": "1526027311",
+        "hash": "e1de8e57a02687d25d08bb509962c4607530bd1f",
+        "commits": [
+            "[2018-05-11] Bumped version to 1.0.7",
+            "[2018-05-11]\tMinor bugfix with redirection loop"
+        ]
+    },
+    {
         "version": "1.0.6",
         "releaseDate": "2018-05-11 08:17:56",
         "releaseTimestamp": "1526026676",
