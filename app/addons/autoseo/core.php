@@ -81,7 +81,6 @@ class AutoSEO
                 $entry['parent'] = $old_value;
                 $entry['status'] = 'a';
                 $entry = $tree->addEntry($entry); // important cut point: inserts node into the fucking tree
-                //aa($tree,1);
                 $entry_id = db_query('INSERT INTO ?:autoseo_entries ?e', $entry);
                 $entry['entry_id'] = $entry_id;
                 db_query('INSERT INTO ?:autoseo_links ?e', $entry);
@@ -92,11 +91,7 @@ class AutoSEO
                     $entry['parent'] = $old_value;
                     $entry['x'] = 1;
 
-                    //aa($entry);
-                    //aa($tree);
                     $entry = $tree->addEntry($entry);
-                    //aa(db_quote('INSERT INTO ?:autoseo_links ?e', $entry));
-                    //aa($entry);exit;
                     db_query('INSERT INTO ?:autoseo_links ?e', $entry);
                 } else {
                     //die('Use case 3');
@@ -105,7 +100,6 @@ class AutoSEO
             $entry_ids = db_get_fields('SELECT entry_id FROM ?:autoseo_entries WHERE object_id = ?i AND object_type = ?s', $object_id, $object_type);
             db_query('UPDATE ?:autoseo_entries SET ?u WHERE object_id = ?i AND object_type = ?s', array('status' => 'a'), $object_id, $object_type);
         }
-        //aa('a',1);
     }
 
     public static function getTree($object_id, $object_type, $lang_code, $company_id)
@@ -124,6 +118,8 @@ class AutoSEO
                 $url = 'products.view?product_id=' . $object_id;
             } elseif ($object_type == 'c') {
                 $url = 'categories.view?category_id=' . $object_id;
+            } elseif ($object_type == 'a') {
+                $url = 'pages.view?page_id=' . $object_id;
             }
         }
         return $url;
