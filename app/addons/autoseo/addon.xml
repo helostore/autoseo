@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
-<addon scheme="2.0">
+<addon scheme="3.0">
     <id>autoseo</id>
     <name>AutoSEO</name>
-    <description>Handles in a smart way the SEO aspect of your actions (ie. creates redirects automatically)</description>
     <version>1.0.4</version>
     <priority>4294967294</priority>
     <position>0</position>
@@ -48,6 +47,9 @@
         <sections>
             <section id="general">
                 <items>
+                    <item id="license">
+                        <type>header</type>
+                    </item>
                     <item id="email">
                         <name>HELOstore email</name>
                         <type>input</type>
@@ -64,12 +66,19 @@
                         <type>info</type>
                         <handler>fn_sidekick_info,autoseo</handler>
                     </item>
+
+                    <item id="settings">
+                        <type>header</type>
+                    </item>
+                    <item id="on_404_redirect_home">
+                        <type>checkbox</type>
+                    </item>
                 </items>
             </section>
         </sections>
     </settings>
     <compatibility>
-        <dependencies>sidekick</dependencies>
+        <dependencies>sidekick,seo</dependencies>
         <core_version>
             <min>4.2.1</min>
         </core_version>

@@ -50,7 +50,6 @@ function fn_autoseo_dispatch_before_display()
         return;
     }
     if (Registry::get('view')->getTemplateVars('exception_status') == CONTROLLER_STATUS_NO_PAGE) {
-
         AutoSEO::resolve($_SERVER['REQUEST_URI']);
     }
 }

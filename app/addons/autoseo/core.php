@@ -182,7 +182,12 @@ class AutoSEO
 
         // last resort, set destination to index
         if (empty($destination)) {
-            $destination = '';
+            $on404GoHome = Registry::get('addons.autoseo.on_404_redirect_home');
+            if ($on404GoHome === 'Y') {
+                $destination = '';
+            } else {
+                return false;
+            }
         }
         if (empty($langCode)) {
             $langCode = CART_LANGUAGE;

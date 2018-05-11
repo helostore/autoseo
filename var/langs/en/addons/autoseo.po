@@ -9,8 +9,12 @@ msgid "AutoSEO"
 msgstr "AutoSEO"
 
 msgctxt "Addons::description::autoseo"
-msgid "Tools for developers by HELOstore"
-msgstr "Handles in a smart way the SEO aspect of your actions"
+msgid "Automatically handles redirections in a smart way, tracks down URL changes, and minimizes 404 errors"
+msgstr "Automatically handles redirections in a smart way, tracks down URL changes, and minimizes 404 errors"
+
+msgctxt "SettingsOptions::autoseo::license"
+msgid "License key yy"
+msgstr "License key xx"
 
 msgctxt "SettingsOptions::autoseo::email"
 msgid "HELOstore email"
@@ -23,3 +27,11 @@ msgstr "HELOstore password"
 msgctxt "SettingsOptions::autoseo::license"
 msgid "License key"
 msgstr "License key"
+
+msgctxt "SettingsOptions::autoseo::settings"
+msgid "Settings"
+msgstr "Settings"
+
+msgctxt "SettingsOptions::autoseo::on_404_redirect_home"
+msgid "On 404, redirect to home page"
+msgstr "On 404, redirect to home page"
