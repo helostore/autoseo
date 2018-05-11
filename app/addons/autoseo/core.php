@@ -179,7 +179,6 @@ class AutoSEO
                 break;
             }
         }
-
         // last resort, set destination to index
         if (empty($destination)) {
             $on404GoHome = Registry::get('addons.autoseo.on_404_redirect_home');
@@ -221,7 +220,6 @@ class AutoSEO
             $company_id = fn_get_default_company_id();
         }
         $entry = db_get_row('SELECT * FROM ?:autoseo_entries WHERE value = ?s AND lang_code = ?s AND company_id = ?i LIMIT 0,1', $fragment, CART_LANGUAGE, $company_id);
-
         $destination = null;
         $langCode = null;
         if (!empty($entry)) {
@@ -231,6 +229,7 @@ class AutoSEO
         // fallback to SEO names, maybe there's a hope
         if (empty($destination)) {
             $seo = db_get_row('SELECT * FROM ?:seo_names WHERE name = ?s', $fragment);
+
             if (!empty($seo)) {
                 $langCode = $seo['lang_code'];
                 if ($seo['type'] == 'c') {
@@ -238,6 +237,9 @@ class AutoSEO
                 }
                 if ($seo['type'] == 'p') {
                     $destination = 'products.view?product_id=' . $seo['object_id'];
+                }
+                if ($seo['type'] == 'a') {
+                    $destination = 'pages.view?page_id=' . $seo['object_id'];
                 }
             }
         }
